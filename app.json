@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/time/time",
+    "pages/plan/plan",
+    "pages/statement/statement"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#5b5b5b",
+    "navigationBarTitleText": "私人教练",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":false
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "selectedColor":"#1296db",
+    "list": [{
+      "pagePath": "pages/time/time",
+      "text": "计时",
+      "iconPath": "resource/icon/time-icon.png",
+      "selectedIconPath": "resource/icon/time-active-icon.png"
+    }, {
+      "pagePath": "pages/plan/plan",
+      "text": "计划",
+      "iconPath": "resource/icon/plan-icon.png",
+      "selectedIconPath": "resource/icon/plan-active-icon.png"
+    }, {
+      "pagePath": "pages/statement/statement",
+      "text": "报表",
+      "iconPath": "resource/icon/statement-icon.png",
+      "selectedIconPath": "resource/icon/statement-active-icon.png"
+    }]
+  }
+}

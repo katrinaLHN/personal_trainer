@@ -1,0 +1,41 @@
+.time-button{
+    width: 256rpx;
+    height: 256rpx;
+    background: #000;
+    opacity: 0.7;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 200rpx;
+    left: 247rpx;
+    font-family: "华文楷体";
+}
+
+.time-bg{
+    width: 750rpx;
+    height: 1148rpx;
+}
+.start-cn{
+    color: white;
+    font-size: 70rpx;
+    position: relative;
+    left:60rpx;
+    top: 40rpx;
+}
+.start-en{
+    color: white;
+    font-size: 55rpx;
+    position: relative;
+    left:-55rpx;
+    bottom:-133rpx;
+}
+.time{
+    position: absolute;
+    color: #000;
+    background: #fff;
+    opacity: 0.7;
+    width: 400rpx;
+    height: 130rpx;
+    font-size: 100rpx;
+    top: 200rpx;
+    left: 175rpx;
+}
