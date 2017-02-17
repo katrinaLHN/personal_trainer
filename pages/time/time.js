@@ -1,5 +1,5 @@
-
-Page({
+var util = require('../../utils/util.js');
+var home={
   data:{
     hour:'00',
     min:'00',
@@ -9,16 +9,38 @@ Page({
   },
   //timing函数，点击button后后，判断state状态码，如果为1，点击既是结束，否则点击就是开始计时
   timing:function(){
-      var state=0;
-      if(state==1){
-          state=0;
+      console.log(this.state.startStop);
+      if(this.state.startStop==1){
+          this.state.startStop=0;
           console.log('该结束了');
-        //   this.setData({
-        //       stateCn:'暂停',
-        //       stateEn:'pause'
-        //   })
+
+        this.setData({
+               stateCn:'开始',
+               stateEn:'start'
+           });
+           clearInterval(this.state.timer);
+           console.log('训练时间:'+this.data.hour+'小时'+this.data.min+'分'+this.data.second+'秒')
+        wx.showActionSheet({
+          itemList: ['此刻暂停', '稍后继续训练'],
+          success: function(res) {
+            console.log(res.tapIndex)
+          },
+          fail: function(res) {
+            
+          }
+        })
       }else{
-            state=1;
+        this.startButton();
+      }
+      
+
+  },
+  startButton:function(){
+    this.state.startStop=1;
+    var t = new Date();
+    console.log(t);
+    console.log(util.formatTime(t));
+            console.log(this);
             this.setData({
               stateCn:'暂停',
               stateEn:'pause'
@@ -31,7 +53,7 @@ Page({
             hour=parseInt(hour);
             //console.log(this);
             var that = this;
-            setInterval(function(){
+            this.state.timer = setInterval(function(){
                 second=second+1;
                 if(second<10){
                     second='0'+second;
@@ -61,10 +83,13 @@ Page({
                 min=parseInt(min);
                 hour=parseInt(hour);
             },1000);
-      }
-      
-
   },
+  //存放状态型数据
+  state:{
+    startStop:0,//表达当前状态是否开始
+    timer:{}    //用来存放计时器
+  },
+  
   onLoad:function(options){
     // 生命周期函数--监听页面加载
 
@@ -101,4 +126,5 @@ Page({
       path: 'path' // 分享路径
     }
   }
-})
+};
+Page(home)

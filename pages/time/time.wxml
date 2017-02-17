@@ -1,9 +1,10 @@
 
     <view  bindlongtap="timing" class="time-button">
-        <label class="start-cn">暂停</label>
-        <label class="start-en">pause</label>
+        <label class="start-cn">{{stateCn}}</label>
+        <label class="start-en">{{stateEn}}</label>
     </view>
 <view class="time">
 {{hour}}:{{min}}:{{second}}
 </view>
 <image src="../../resource/time-bg/1.png" class="time-bg"></image>
+
