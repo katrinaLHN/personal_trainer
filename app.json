@@ -2,7 +2,8 @@
   "pages":[
     "pages/time/time",
     "pages/plan/plan",
-    "pages/statement/statement"
+    "pages/statement/statement",
+    "pages/settleAccounts/settleAccounts"
   ],
   "window":{
     "backgroundTextStyle":"light",

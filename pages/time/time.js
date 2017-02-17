@@ -1,4 +1,6 @@
 var util = require('../../utils/util.js');
+var saveTime = require('../../data/data-saveTime.js');
+
 var home={
   data:{
     hour:'00',
@@ -11,9 +13,19 @@ var home={
   timing:function(){
       console.log(this.state.startStop);
       if(this.state.startStop==1){
+
+          var stopTime = new Date();
+        // console.log(util.formatTime(startTime));
+        stopTime=util.formatTime(stopTime);
+        //将点击开始的时候的时间存起来
+        saveTime.time.stopTime=stopTime;
+        console.log(util.getSaveTime());
+
           this.state.startStop=0;
           console.log('该结束了');
-
+          var stopTime = new Date();
+          console.log(util.formatTime(stopTime));
+          this.state.stopTime=util.formatTime(stopTime);
         this.setData({
                stateCn:'开始',
                stateEn:'start'
@@ -21,9 +33,15 @@ var home={
            clearInterval(this.state.timer);
            console.log('训练时间:'+this.data.hour+'小时'+this.data.min+'分'+this.data.second+'秒')
         wx.showActionSheet({
-          itemList: ['此刻暂停', '稍后继续训练'],
+          itemList: ['结束训练', '休息一下，稍后继续训练'],
           success: function(res) {
             console.log(res.tapIndex)
+            if(res.tapIndex==0){
+                wx.navigateTo({
+                  url: '../settleAccounts/settleAccounts',
+                })
+            }
+            
           },
           fail: function(res) {
             
@@ -35,11 +53,16 @@ var home={
       
 
   },
+  //点击开始按钮开始计时
   startButton:function(){
     this.state.startStop=1;
-    var t = new Date();
-    console.log(t);
-    console.log(util.formatTime(t));
+    var startTime = new Date();
+    // console.log(util.formatTime(startTime));
+    startTime=util.formatTime(startTime);
+    //将点击开始的时候的时间存起来
+    saveTime.time.startTime=startTime;
+    console.log(util.getSaveTime());
+    // this.state.startTime=util.formatTime(startTime);
             console.log(this);
             this.setData({
               stateCn:'暂停',
@@ -87,7 +110,9 @@ var home={
   //存放状态型数据
   state:{
     startStop:0,//表达当前状态是否开始
-    timer:{}    //用来存放计时器
+    timer:{},    //用来存放计时器
+    startTime:'',
+    overTime:''
   },
   
   onLoad:function(options){

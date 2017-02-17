@@ -5,7 +5,7 @@
     opacity: 0.7;
     border-radius: 50%;
     position: absolute;
-    bottom: 200rpx;
+    top: 700rpx;
     left: 247rpx;
     
 }
@@ -13,6 +13,7 @@
 .time-bg{
     width: 750rpx;
     height: 1148rpx;
+    z-index: -1;
 }
 .start-cn{
     display: block;
@@ -38,9 +39,11 @@
     color: #000;
     background: #fff;
     opacity: 0.7;
-    width: 400rpx;
+    width: 430rpx;
     height: 130rpx;
     font-size: 100rpx;
     top: 200rpx;
-    left: 175rpx;
+    left: 160rpx;
+    text-align: center;
+    line-height: 130rpx;
 }

@@ -1,0 +1,48 @@
+.training-time{
+    width:560rpx;
+    height: 170rpx;
+    margin:140rpx 0 0 60rpx; 
+    color: #000;
+    font-family: "微软雅黑";
+}
+.training-time label,.startTime label,.stopTime label{
+    display: block;
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.training-time text{
+    display: block;
+    margin-top:20rpx;
+    font-size: 65rpx;
+}
+.startTime label,.stopTime label{
+    float: left;
+}
+.startTime{
+    width:760rpx;
+    height: 170rpx;
+    margin:255rpx 0 0 120rpx; 
+    color: #000;
+    font-family: "微软雅黑";
+}
+.startTime text,.stopTime text{
+    display: block;
+    margin-top:10rpx;
+    font-size: 50rpx;
+    clear: both;
+}
+
+.stopTime{
+    width:760rpx;
+    height: 170rpx;
+    margin:80rpx 0 0 120rpx; 
+    color: #000;
+    font-family: "微软雅黑";
+}
+
+button{
+    float: left;
+    clear: right;
+    margin-left:15rpx;
+    margin-top: 5rpx;
+}

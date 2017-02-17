@@ -1,0 +1,16 @@
+<view class="training-time">
+    <label>训练时长</label>
+    <text>03小时20分钟25秒</text>
+</view>
+
+<view class="startTime">
+    <label>开始时间</label>
+    <button size="mini">修改</button>
+    <text>2017年2月17日 14:08:24</text>
+</view>
+
+<view class="stopTime">
+    <label>结束时间</label>
+    <button size="mini">修改</button>
+    <text>2017年2月17日 14:08:24</text>
+</view>
