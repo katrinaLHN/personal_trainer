@@ -1,9 +1,10 @@
 {
   "pages":[
     "pages/time/time",
+    "pages/settleAccounts/settleAccounts",
     "pages/plan/plan",
-    "pages/statement/statement",
-    "pages/settleAccounts/settleAccounts"
+    "pages/statement/statement"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

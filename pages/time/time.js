@@ -17,15 +17,18 @@ var home={
           var stopTime = new Date();
         // console.log(util.formatTime(startTime));
         stopTime=util.formatTime(stopTime);
-        //将点击开始的时候的时间存起来
+        //将点击结束的时候的时间存起来
         saveTime.time.stopTime=stopTime;
-        console.log(util.getSaveTime());
+        // console.log(util.getSaveTime());
 
           this.state.startStop=0;
-          console.log('该结束了');
+          // console.log('该结束了');
           var stopTime = new Date();
-          console.log(util.formatTime(stopTime));
-          this.state.stopTime=util.formatTime(stopTime);
+          saveTime.time.stopPoint=stopTime;
+          // console.log(util.formatTime(stopTime));
+          
+          // this.state.stopTime=util.formatTime(stopTime);
+          this.countTime();
         this.setData({
                stateCn:'开始',
                stateEn:'start'
@@ -58,6 +61,7 @@ var home={
     this.state.startStop=1;
     var startTime = new Date();
     // console.log(util.formatTime(startTime));
+    saveTime.time.startPoint=startTime;
     startTime=util.formatTime(startTime);
     //将点击开始的时候的时间存起来
     saveTime.time.startTime=startTime;
@@ -114,7 +118,22 @@ var home={
     startTime:'',
     overTime:''
   },
-  
+  //计算训练时间存储训练时间
+  countTime:function(){
+      console.log('kailqiel');
+     
+      saveTime.time.startPoint=saveTime.time.startPoint.getTime();
+      saveTime.time.stopPoint=saveTime.time.stopPoint.getTime();
+       var allTime=saveTime.time.stopPoint-saveTime.time.startPoint;
+       console.log('allTime'+allTime);
+        allTime = allTime/1000;
+        var hour = parseInt(allTime/3600);
+					allTime%=3600;
+        var minute = parseInt(allTime/60);
+					allTime%=60;
+					var second =parseInt(allTime);
+        saveTime.time.allTime = hour+'小时'+minute+'分钟'+second+'秒';
+  },
   onLoad:function(options){
     // 生命周期函数--监听页面加载
 

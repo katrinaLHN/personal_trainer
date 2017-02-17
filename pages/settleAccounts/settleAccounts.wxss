@@ -46,3 +46,23 @@ button{
     margin-left:15rpx;
     margin-top: 5rpx;
 }
+.updateForm{
+    width: 744rpx;
+    height: 500rpx;
+    border: 2px solid #000;
+    position: absolute;
+    top: 450rpx;
+    left: 23rxp;
+    background:lightgray;
+}
+.updateForm .section{
+    background:#fff;
+    margin:60rpx 20rpx;
+    padding:20rpx
+}
+.updateForm .confirm{
+    margin-left:160rpx 
+}
+.updateForm .concel{
+    margin-left: 160rpx
+}

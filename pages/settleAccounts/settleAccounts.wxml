@@ -1,16 +1,56 @@
 <view class="training-time">
     <label>训练时长</label>
-    <text>03小时20分钟25秒</text>
+    <text>{{allTime}}</text>
 </view>
 
 <view class="startTime">
     <label>开始时间</label>
-    <button size="mini">修改</button>
-    <text>2017年2月17日 14:08:24</text>
+    <button size="mini" bindtap="amendStartTime">修改</button>
+    <text>{{startTime}}</text>
 </view>
 
 <view class="stopTime">
     <label>结束时间</label>
-    <button size="mini">修改</button>
-    <text>2017年2月17日 14:08:24</text>
+    <button size="mini" bindtap="amendStopTime">修改</button>
+    <text>{{stopTime}}</text>
+</view>
+
+<view class="updateForm" style="display:{{startDisplay}};">
+修改开始时间
+    <view class="section">  
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">  
+        <view class="picker">  
+        时间 : {{time}}  
+        </view>  
+    </picker>  
+    </view>  
+    <view class="section">  
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">  
+        <view class="picker">  
+        日期: {{date}}  
+        </view>  
+    </picker>  
+    </view>
+    <button size="default" class="confirm">确认</button>
+    <button size="default" class="concel">取消</button>  
+</view>
+
+<view class="updateForm" style="display:{{stopDisplay}};">
+修改结束时间
+    <view class="section">  
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">  
+        <view class="picker">  
+        时间 : {{time}}  
+        </view>  
+    </picker>  
+    </view>  
+    <view class="section">  
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">  
+        <view class="picker">  
+        日期: {{date}}  
+        </view>  
+    </picker>  
+    </view>
+    <button size="default" class="confirm">确认</button>
+    <button size="default" class="concel">取消</button>  
 </view>

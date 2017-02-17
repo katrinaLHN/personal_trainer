@@ -1,5 +1,5 @@
 /**
- * Created by Rebecca_Han on 16/10/26.
+ * Created by lihaonan on 2017/02/17.
  */
 module.exports = {
 
@@ -7,7 +7,8 @@ module.exports = {
 
 var time= {
     "startTime": '',
-    "stopTime":  ''  
+    "stopTime":  '',
+    "allTime":''  
 }
 
 module.exports.time = time;
