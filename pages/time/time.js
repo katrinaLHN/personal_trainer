@@ -16,6 +16,8 @@ var home={
 
           var stopTime = new Date();
         // console.log(util.formatTime(startTime));
+        saveTime.time.stopTime1 =util.getTime(stopTime);
+         saveTime.time.stopDate =util.getDate(stopTime);
         stopTime=util.formatTime(stopTime);
         //将点击结束的时候的时间存起来
         saveTime.time.stopTime=stopTime;
@@ -60,9 +62,12 @@ var home={
   startButton:function(){
     this.state.startStop=1;
     var startTime = new Date();
+    saveTime.time.startTime1 = util.getTime(startTime);
+    saveTime.time.startDate = util.getDate(startTime);
     // console.log(util.formatTime(startTime));
     saveTime.time.startPoint=startTime;
     startTime=util.formatTime(startTime);
+    
     //将点击开始的时候的时间存起来
     saveTime.time.startTime=startTime;
     console.log(util.getSaveTime());
@@ -120,7 +125,7 @@ var home={
   },
   //计算训练时间存储训练时间
   countTime:function(){
-      console.log('kailqiel');
+      // console.log('kailqiel');
      
       saveTime.time.startPoint=saveTime.time.startPoint.getTime();
       saveTime.time.stopPoint=saveTime.time.stopPoint.getTime();
