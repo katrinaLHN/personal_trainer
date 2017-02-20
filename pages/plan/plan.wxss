@@ -1,0 +1,50 @@
+page{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.main-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-bottom: 2px solid #000;
+}
+
+.title-nav{
+    display: flex;
+    height: 80rpx;
+    justify-content: space-around;
+    flex-direction: row;
+    background: #fff;
+}
+
+.title-button{
+    display: flex;
+    flex: 1;
+    height: 80rpx;
+    align-items: center;
+    justify-content: center;
+    font-family: '微软雅黑';
+    font-weight: bold;
+    font-size: 25rpx;
+}
+
+.title-text{
+    font-size: 32rpx;
+    padding: 17rpx;
+}
+
+.content-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.selected{
+    border-bottom:3px solid #000;
+}
+.sport-item{
+    width: 100rpx; 
+    height: 50rpx; 
+    display: inline-flex;
+}

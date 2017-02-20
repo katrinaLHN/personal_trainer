@@ -1,0 +1,36 @@
+<view class="main-container">
+<view class="title-nav">
+    <block wx:for="{{titleName}}" wx:key="">
+        <view bindtap="tapTitle" class="title-button" id="{{index}}">
+            <text class="title-text {{item.tapTitle?'selected':'normal'}}">{{item.name}}</text>
+        </view>
+    </block>
+</view>
+</view>
+
+
+
+<view class="content-item apparatus" style="display:{{apparatusDisplay}}">
+器械
+</view>
+
+<view class="content-item body" style="display:{{bodyDisplay}}">
+   
+
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+<!-- display: inline-block-->
+ <view class="sport-item" style="background: red;" >全部</view>
+ <view class="sport-item" style="background: green;">胸部</view>
+ <view class="sport-item" style="background: blue;">肩部</view>
+ <view class="sport-item" style="background: yellow;">腿部</view>
+</scroll-view>
+
+
+</view>
+<view class="content-item collect" style="display:{{collectDisplay}}">
+收藏
+</view>
+
+
+
+
