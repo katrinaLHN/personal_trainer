@@ -1,3 +1,5 @@
+//强迫症想强行点亮一个点点
+
 var sportItem = require('../../data/data-sportItem.js');
 Page({
   data:{
